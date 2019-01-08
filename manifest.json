@@ -4,12 +4,12 @@
   "description": "Norzan displays rest of remaining time into a new tab.",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["js/background.js"],
     "persistent": false
   },
-  "options_page": "options.html",
+  "options_page": "html/options.html",
   "page_action": {
-    "default_popup": "popup.html",
+    "default_popup": "html/popup.html",
     "default_icon": {
       "16": "images/get_started16.png",
       "32": "images/get_started32.png",

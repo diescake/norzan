@@ -1,4 +1,4 @@
-const page = document.getElementById('buttonDiv')
+const buttonDiv = document.getElementById('buttonDiv')
 const BUTTON_COLORS = ['#3aa757', '#e8453c', '#f9bb2d', '#4688f1']
 
 const constructOptions = colors => {
@@ -10,7 +10,7 @@ const constructOptions = colors => {
         console.log(`color is ${color}`)
       })
     })
-    page.appendChild(button)
+    buttonDiv.appendChild(button)
   })
 }
 
