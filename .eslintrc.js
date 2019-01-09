@@ -1,12 +1,15 @@
 module.exports = {
   globals: {
+    moment: true,
     chrome: true,
+    import: true,
   },
   env: {
     browser: true,
     es6: true,
   },
   extends: 'eslint:recommended',
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
@@ -18,4 +21,4 @@ module.exports = {
     semi: ['error', 'never'],
     'no-console': 'off',
   },
-};
+}
