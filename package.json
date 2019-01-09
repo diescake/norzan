@@ -1,7 +1,6 @@
 {
   "name": "norzan",
   "version": "0.1.0",
-  "main": "index.js",
   "repository": "git@github.com:diescake/norzan.git",
   "author": "diescake",
   "license": "MIT",

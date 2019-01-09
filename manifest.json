@@ -1,11 +1,14 @@
 {
   "name": "Norzan",
   "version": "0.1.0",
-  "description": "Norzan displays rest of remaining time into a new tab.",
+  "description": "Norzan displays the rest of workable time into a new tab.",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["js/background.js"],
     "persistent": false
+  },
+  "chrome_url_overrides": {
+    "newtab": "html/main.html"
   },
   "options_page": "html/options.html",
   "page_action": {
