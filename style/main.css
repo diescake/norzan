@@ -1,9 +1,9 @@
 html {
   font-size: 62.5%;
-  font-family: 'Rubik', sans-serif;
 }
 
 body {
+  /* prevent blink */
   background-color: #222;
 }
 
@@ -18,5 +18,4 @@ body {
 .time {
   font-family: 'Trebuchet MS', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   font-size: 7vw;
-  color: #e3e3e3;
 }
