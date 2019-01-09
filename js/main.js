@@ -1,3 +1,8 @@
-const remainingTime = document.getElementById('rest-of-time')
+(async () => {
+  const { Norzan } = await import('/js/Norzan.js')
+  const { norzanConfig } = await import('/config/norzan.config.js')
 
-remainingTime.innerText = 'HOGE FOO BAR'
+  const time = document.getElementById('time')
+  const norzan = new Norzan(norzanConfig, time)
+  norzan.startTimer()
+})()

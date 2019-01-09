@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: #222;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.time {
+  font-family: 'Trebuchet MS', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 7vw;
+  color: #e3e3e3;
+}
