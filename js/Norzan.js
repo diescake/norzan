@@ -1,17 +1,16 @@
 export class Norzan {
   constructor(config, distDom) {
     this.config = config
-    this.wording = config.wording
     this.distDom = distDom
     this.intervalId = null
 
-    this.workTimeStart = moment()
+    this.openingTime = moment()
       .startOf('day')
-      .add(config.workTimeStart, 'hours')
+      .add(config.openingTime, 'hours')
 
-    this.workTimeEnd = moment()
+    this.closingTime = moment()
       .startOf('day')
-      .add(config.workTimeEnd, 'hours')
+      .add(config.closingTime, 'hours')
   }
 
   _updateTime() {
@@ -21,17 +20,17 @@ export class Norzan {
     }
 
     this.endTimer()
-    this.distDom.innerText = this.wording.workFinished
+    this.distDom.innerText = this.config.messageInClosed
   }
 
   _isWorkingTime() {
     const now = moment()
-    return now.isBetween(this.workTimeStart, this.workTimeEnd)
+    return now.isBetween(this.openingTime, this.closingTime)
   }
 
   _createDateString() {
     const now = moment()
-    const duration = moment.duration(this.workTimeEnd.diff(now))
+    const duration = moment.duration(this.closingTime.diff(now))
     return duration.format(this.config.durationFormat, { trim: false })
   }
 

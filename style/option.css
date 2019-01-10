@@ -1,0 +1,40 @@
+body {
+  padding: 20px 30px;
+}
+
+h1 {
+  font-size: 6rem;
+  margin: 0 0 15px;
+}
+
+input {
+  font-size: 2rem;
+  padding: 3px 5px;
+  width: 500px;
+}
+
+button {
+  font-size: 1.2rem;
+}
+
+.main {
+  display: table;
+  padding: 10px 30px 30px;
+  line-height: 1.7;
+  width: 800px;
+  font-size: 2rem;
+}
+
+.option-row {
+  display: table-row;
+}
+
+.option-cell {
+  display: table-cell;
+  width: 200px;
+  list-style-type: disc;
+}
+
+.footer {
+  font-size: 1.6rem;
+}

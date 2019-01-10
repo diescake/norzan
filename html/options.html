@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-        margin: 10px;
-      }
-    </style>
+    <title>Options</title>
+    <link rel="stylesheet" type="text/css" href="/style/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/style/common.css" />
+    <link rel="stylesheet" type="text/css" href="/style/option.css" />
   </head>
   <body>
-    <div id="buttonDiv"></div>
-    <div><p>Choose a different background color!</p></div>
+    <h1>Norzan options</h1>
+    <main class="main">
+      <form id="options-form" name="options">
+        <div class="option-row"><span class="option-cell">Time format:</span><input id="duration-format" type="text" placeholder="hh:mm:ss.SS" /></div>
+        <div class="option-row"><span class="option-cell">Update interval:</span> <input id="update-interval" type="text" placeholder="90" /></div>
+        <div class="option-row"><span class="option-cell">Opening time:</span> <input id="opening-time" type="text" placeholder="10.5" /></div>
+        <div class="option-row"><span class="option-cell">Closing time:</span><input id="closing-time" type="text" placeholder="19.0" /></div>
+        <div class="option-row"><span class="option-cell">Message in closed:</span><input id="message-in-closed" type="text" placeholder="Closed" /></div>
+        <div class="option-row"><span class="option-cell">Background color:</span><input id="background-color" type="text" placeholder="#222" /></div>
+        <div class="option-row"><span class="option-cell">Font color:</span><input id="font-color" type="text" placeholder="#e3e3e3" /></div>
+        <button id="save-button" type="button">save</button> <button id="reset-button" type="button">reset</button>
+      </form>
+    </main>
+    <footer class="footer"><a href="https://github.com/diescake/norzan">GitHub</a> | <a href="https://twitter.com/phocaenidae">Twitter</a></footer>
   </body>
   <script src="/js/options.js"></script>
 </html>
