@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  /* prevent blink */
+  /* FIXME: prevent flickering */
   background-color: #222;
 }
 
