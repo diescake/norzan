@@ -28,8 +28,9 @@ const setStyle = config => {
   const { Norzan } = await import('/js/Norzan.js')
   let option = await loadOption()
   if (!option.durationFormat) {
-    option = await import('/config/norzan.config.js')
+    option = (await import('/config/norzan.config.js')).defaultOption
   }
+  console.log(option)
 
   setStyle(option)
 
