@@ -12,8 +12,14 @@ const elems = {
 }
 
 const loadOptions = () => {
-  // TODO: implement
-  chrome.storage.sync.get(Object.keys(elems), data => {
+  // FIXME: simplify
+  chrome.storage.sync.get(Object.keys(elems), async data => {
+    if (!data.durationFormat) {
+      await resetOptions()
+      loadOptions()
+      return
+    }
+
     elems.durationFormat.value = data.durationFormat
     elems.updateIntervalMs.value = data.updateIntervalMs
     elems.openingTime.value = data.openingTime
