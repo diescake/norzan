@@ -4,8 +4,21 @@
   "repository": "git@github.com:diescake/norzan.git",
   "author": "diescake",
   "license": "MIT",
+  "scripts": {
+    "build": "parcel build --out-dir dist/prod/static html/main.html"
+  },
+  "staticFiles": {
+    "staticPath": "images",
+    "watcherGlob": "**"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.0"
+    "eslint": "^5.12.0",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-static-files-copy": "^2.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.23.0",
+    "moment-duration-format": "^2.2.2"
   }
 }

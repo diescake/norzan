@@ -1,3 +1,10 @@
+# Norzan
+/dist/prod/static
+.DS_Store
+
+# Parcel
+.cache
+
 # Logs
 logs
 *.log

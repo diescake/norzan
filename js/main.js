@@ -1,8 +1,16 @@
+import '../style/reset.css'
+import { Norzan } from '../js/Norzan.js'
+import { defaultOption } from '../config/norzan.config.js'
+
 const loadOption = () =>
   new Promise(resolve => {
     chrome.storage.sync.get(
       ['durationFormat', 'updateIntervalMs', 'openingTime', 'closingTime', 'messageInClosed', 'backgroundColor', 'fontColor'],
       data => {
+        if (!data.durationFormat) {
+          resolve(null)
+        }
+
         resolve({
           durationFormat: data.durationFormat,
           updateIntervalMs: data.updateIntervalMs,
@@ -25,13 +33,7 @@ const setStyle = config => {
 }
 
 ;(async () => {
-  const { Norzan } = await import('/js/Norzan.js')
-  let option = await loadOption()
-  if (!option.durationFormat) {
-    option = (await import('/config/norzan.config.js')).defaultOption
-  }
-  console.log(option)
-
+  const option = (await loadOption()) || defaultOption
   setStyle(option)
 
   const time = document.getElementById('time')
