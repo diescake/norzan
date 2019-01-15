@@ -3,7 +3,7 @@ export const defaultOption = {
   updateIntervalMs: 90,
   openingTime: 10.5,
   closingTime: 19.0,
-  messageInClosed: '本日の業務は終了しました。',
+  messageInClosed: 'During non-business hours.',
   backgroundColor: '#222',
   fontColor: '#e3e3e3',
 }

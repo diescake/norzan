@@ -18,7 +18,7 @@ Currently, this extension is not published to Chrome Web Store. Please clone thi
   updateIntervalMs: 90,
   openingTime: 10.5, // It means AM 10:30
   closingTime: 19.0, // It means PM 07:00
-  messageInClosed: '本日の業務は終了しました。',
+  messageInClosed: 'During non-business hours.',
   backgroundColor: '#222',
   fontColor: '#e3e3e3',
 }
