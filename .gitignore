@@ -1,5 +1,9 @@
 # Norzan
-/dist/prod/static
+/dist/prod/*.html
+/dist/prod/*.png
+/dist/prod/*.js
+/dist/prod/*.css
+/dist/prod/*.map
 .DS_Store
 
 # Parcel

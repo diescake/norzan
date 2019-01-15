@@ -1,8 +1,6 @@
 module.exports = {
   globals: {
-    moment: true,
     chrome: true,
-    import: true,
   },
   env: {
     browser: true,

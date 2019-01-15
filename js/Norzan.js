@@ -1,3 +1,6 @@
+import moment from 'moment'
+import 'moment-duration-format'
+
 export class Norzan {
   constructor(config, distDom) {
     this.config = config

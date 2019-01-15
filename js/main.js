@@ -1,4 +1,5 @@
 import '../style/reset.css'
+import '../style/main.css'
 import { Norzan } from '../js/Norzan.js'
 import { defaultOption } from '../config/norzan.config.js'
 
