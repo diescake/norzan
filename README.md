@@ -10,6 +10,14 @@ Norzan is a Chrome Extension to display the rest of workable time into it's new 
 
 Currently, this extension is not published to Chrome Web Store. Please clone this repository and load as a unpacked extension. See the official tutorial for Chrome Extensions [Getting Started Tutorial](https://developer.chrome.com/extensions/getstarted)
 
+## Development
+
+Generate production codes and collect assets under the `dist/prod` directory. If you want to run in your Chrome browser, load the `prod` directory as top of unpacked Chrome Extension.
+
+```js
+$ yarn build
+```
+
 ## Config
 
 ```js
