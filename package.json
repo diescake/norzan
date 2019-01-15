@@ -5,7 +5,7 @@
   "author": "diescake",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build --no-cache --out-dir dist/prod html/main.html"
+    "build": "parcel build --no-cache --out-dir dist/prod html/*.html"
   },
   "staticFiles": {
     "staticPath": "images",

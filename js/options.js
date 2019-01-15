@@ -1,3 +1,9 @@
+import '../style/reset.css'
+import '../style/common.css'
+import '../style/option.css'
+
+import { defaultOption } from '../config/norzan.config.js'
+
 const saveButton = document.getElementById('save-button')
 const resetButton = document.getElementById('reset-button')
 
@@ -48,8 +54,6 @@ const saveOptions = () => {
   })
 }
 const resetOptions = async () => {
-  const { defaultOption } = await import('/config/norzan.config.js')
-
   // FIXME: simplify
   chrome.storage.sync.set({
     durationFormat: defaultOption.durationFormat,

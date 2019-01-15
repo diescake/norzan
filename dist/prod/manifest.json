@@ -6,6 +6,7 @@
   "chrome_url_overrides": {
     "newtab": "main.html"
   },
+  "options_page": "options.html",
   "page_action": {
     "default_icon": {
       "16": "get_started16.png",
