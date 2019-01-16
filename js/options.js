@@ -19,9 +19,9 @@ const elems = {
 
 const loadOptions = () => {
   // FIXME: simplify
-  chrome.storage.sync.get(Object.keys(elems), async data => {
+  chrome.storage.sync.get(Object.keys(elems), data => {
     if (!data.durationFormat) {
-      await resetOptions()
+      resetOptions()
       loadOptions()
       return
     }
@@ -53,7 +53,8 @@ const saveOptions = () => {
     fontColor: elems.fontColor.value,
   })
 }
-const resetOptions = async () => {
+
+const resetOptions = () => {
   // FIXME: simplify
   chrome.storage.sync.set({
     durationFormat: defaultOption.durationFormat,
@@ -65,10 +66,15 @@ const resetOptions = async () => {
     fontColor: defaultOption.fontColor,
   })
 }
-saveButton.addEventListener('click', () => saveOptions())
-resetButton.addEventListener('click', async () => {
-  await resetOptions()
-  loadOptions()
+
+saveButton.addEventListener('click', () => {
+  saveOptions()
+  history.back()
+})
+
+resetButton.addEventListener('click', () => {
+  resetOptions()
+  history.back()
 })
 
 loadOptions()
