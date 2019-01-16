@@ -21,6 +21,7 @@
     "parcel-plugin-static-files-copy": "^2.0.0"
   },
   "dependencies": {
+    "change-case": "^3.1.0",
     "moment": "^2.23.0",
     "moment-duration-format": "^2.2.2"
   }

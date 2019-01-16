@@ -1,71 +1,46 @@
+import { kebabCase } from 'change-case'
+import { defaultOption } from '../config/norzan.config.js'
+
 import '../style/reset.css'
 import '../style/common.css'
 import '../style/option.css'
 
-import { defaultOption } from '../config/norzan.config.js'
-
 const saveButton = document.getElementById('save-button')
 const resetButton = document.getElementById('reset-button')
 
-const elems = {
-  durationFormat: document.getElementById('duration-format'),
-  updateIntervalMs: document.getElementById('update-interval'),
-  openingTime: document.getElementById('opening-time'),
-  closingTime: document.getElementById('closing-time'),
-  messageInClosed: document.getElementById('message-in-closed'),
-  backgroundColor: document.getElementById('background-color'),
-  fontColor: document.getElementById('font-color'),
-}
+const optionKeys = Object.keys(defaultOption)
+
+const elems = optionKeys.reduce((obj, key) => {
+  const elem = document.getElementById(kebabCase(key))
+  if (!elem) {
+    console.warn(`${kebabCase(key)} is not declared in options.html.`)
+    return obj
+  }
+  return { ...obj, [key]: elem }
+}, {})
 
 const loadOptions = () => {
-  // FIXME: simplify
-  chrome.storage.sync.get(Object.keys(elems), data => {
-    if (!data.durationFormat) {
+  chrome.storage.sync.get(optionKeys, option => {
+    if (!option.durationFormat) {
+      console.warn('Stored options are corrupted, and so run reset process.')
       resetOptions()
       loadOptions()
       return
     }
-
-    elems.durationFormat.value = data.durationFormat
-    elems.updateIntervalMs.value = data.updateIntervalMs
-    elems.openingTime.value = data.openingTime
-    elems.closingTime.value = data.closingTime
-    elems.messageInClosed.value = data.messageInClosed
-    elems.backgroundColor.value = data.backgroundColor
-    elems.fontColor.value = data.fontColor
+    optionKeys.forEach(key => (elems[key].value = option[key]))
   })
 }
 
 const saveOptions = () => {
-  // FIXME: simplify
   if (!elems.durationFormat) {
     console.error('No value')
     return
   }
-
-  chrome.storage.sync.set({
-    durationFormat: elems.durationFormat.value,
-    updateIntervalMs: elems.updateIntervalMs.value,
-    openingTime: elems.openingTime.value,
-    closingTime: elems.closingTime.value,
-    messageInClosed: elems.messageInClosed.value,
-    backgroundColor: elems.backgroundColor.value,
-    fontColor: elems.fontColor.value,
-  })
+  const option = optionKeys.reduce((obj, key) => ({ ...obj, [key]: elems[key].value }), {})
+  chrome.storage.sync.set(option)
 }
 
-const resetOptions = () => {
-  // FIXME: simplify
-  chrome.storage.sync.set({
-    durationFormat: defaultOption.durationFormat,
-    updateIntervalMs: defaultOption.updateIntervalMs,
-    openingTime: defaultOption.openingTime,
-    closingTime: defaultOption.closingTime,
-    messageInClosed: defaultOption.messageInClosed,
-    backgroundColor: defaultOption.backgroundColor,
-    fontColor: defaultOption.fontColor,
-  })
-}
+const resetOptions = () => chrome.storage.sync.set({ ...defaultOption })
 
 saveButton.addEventListener('click', () => {
   saveOptions()
