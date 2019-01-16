@@ -3,15 +3,39 @@ body {
   background-color: #222;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
 }
 
 .time {
   font-family: 'Trebuchet MS', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   font-size: 7vw;
+}
+
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 3vh;
+}
+
+.a-option {
+  opacity: 0.5;
+  color: gray;
+  text-decoration: none;
+  font-size: 5rem;
+  margin: 15px;
 }
