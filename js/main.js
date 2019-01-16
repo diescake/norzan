@@ -5,38 +5,27 @@ import '../style/main.css'
 import { Norzan } from '../js/Norzan.js'
 import { defaultOption } from '../config/norzan.config.js'
 
+const elems = {
+  body: document.body,
+  time: document.getElementById('time'),
+}
+
 const loadOption = () =>
   new Promise(resolve => {
     chrome.storage.sync.get(Object.keys(defaultOption), data => {
-      if (!data.durationFormat) {
-        resolve(null)
-      }
-
-      resolve({
-        durationFormat: data.durationFormat,
-        updateIntervalMs: data.updateIntervalMs,
-        openingTime: data.openingTime,
-        closingTime: data.closingTime,
-        messageInClosed: data.messageInClosed,
-        backgroundColor: data.backgroundColor,
-        fontColor: data.fontColor,
-      })
+      resolve(data.durationFormat ? { ...data } : null)
     })
   })
 
-const setStyle = config => {
-  const body = document.body
-  const time = document.getElementById('time')
-
-  body.style.backgroundColor = config.backgroundColor
-  time.style.color = config.fontColor
+const setStyle = option => {
+  elems.body.style.backgroundColor = option.backgroundColor
+  elems.time.style.color = option.fontColor
 }
 
 ;(async () => {
   const option = (await loadOption()) || defaultOption
   setStyle(option)
 
-  const time = document.getElementById('time')
-  const norzan = new Norzan(option, time)
+  const norzan = new Norzan(option, elems.time)
   norzan.startTimer()
 })()
