@@ -1,7 +1,7 @@
 # Norzan
 
 <p align="center">
-  <img src="icon.png" alt="icon" width="820" height="312">
+  <img src="icon.png" alt="icon" width="1640">
 </p>
 
 Norzan is a Chrome Extension to display the rest of workable time into it's new tab. The extension allows you to represent your time to your co-workers and strongly persist that **"I don't wanna work overtime !!"**.
