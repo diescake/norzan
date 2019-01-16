@@ -27,7 +27,7 @@ $ yarn build
   openingTime: '10:30:00',
   closingTime: '19:00:00',
   messageInClosed: 'During non-business hours.',
-  backgroundColor: '#222222', // Actually, input from your browser's color picker.
+  backgroundColor: '#222222', // Actually, input from the color picker in your browser.
   fontColor: '#e3e3e3',
 }
 ```
