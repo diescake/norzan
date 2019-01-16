@@ -2,9 +2,9 @@ import moment from 'moment'
 import 'moment-duration-format'
 
 export class Norzan {
-  constructor(config, distDom) {
+  constructor(config, outDom) {
     this.config = config
-    this.distDom = distDom
+    this.outDom = outDom
     this.intervalId = null
 
     this.openingTime = moment(config.openingTime, moment.HTML5_FMT.TIME_SECONDS)
@@ -15,12 +15,12 @@ export class Norzan {
     const now = moment()
 
     if (this._isWorkingTime(now)) {
-      this.distDom.innerText = this._createDateString(now)
+      this.outDom.innerText = this._createDateString(now)
       return
     }
 
     this.endTimer()
-    this.distDom.innerText = this.config.messageInClosed
+    this.outDom.innerText = this.config.messageInClosed
   }
 
   _isWorkingTime(now) {
