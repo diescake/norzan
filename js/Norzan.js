@@ -40,9 +40,10 @@ export class Norzan {
   }
 
   endTimer() {
-    if (this.intervalId) {
-      clearInterval(this.intervalId)
-      this.intervalId = ''
+    if (!this.intervalId) {
+      return
     }
+    clearInterval(this.intervalId)
+    this.intervalId = ''
   }
 }
