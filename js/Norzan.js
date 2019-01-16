@@ -5,7 +5,7 @@ export class Norzan {
   constructor(config, outDom) {
     this.config = config
     this.outDom = outDom
-    this.intervalId = null
+    this.intervalId = ''
 
     this.openingTime = moment(config.openingTime, moment.HTML5_FMT.TIME_SECONDS)
     this.closingTime = moment(config.closingTime, moment.HTML5_FMT.TIME_SECONDS)
@@ -42,7 +42,7 @@ export class Norzan {
   endTimer() {
     if (this.intervalId) {
       clearInterval(this.intervalId)
-      this.intervalId = null
+      this.intervalId = ''
     }
   }
 }
