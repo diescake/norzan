@@ -17,8 +17,10 @@ export class Norzan {
   }
 
   _updateTime() {
-    if (this._isWorkingTime()) {
-      this.distDom.innerText = this._createDateString()
+    const now = moment()
+
+    if (this._isWorkingTime(now)) {
+      this.distDom.innerText = this._createDateString(now)
       return
     }
 
@@ -26,13 +28,11 @@ export class Norzan {
     this.distDom.innerText = this.config.messageInClosed
   }
 
-  _isWorkingTime() {
-    const now = moment()
+  _isWorkingTime(now) {
     return now.isBetween(this.openingTime, this.closingTime)
   }
 
-  _createDateString() {
-    const now = moment()
+  _createDateString(now) {
     const duration = moment.duration(this.closingTime.diff(now))
     return duration.format(this.config.durationFormat, { trim: false })
   }
