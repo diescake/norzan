@@ -1,5 +1,5 @@
 body {
-  /* FIXME: prevent flickering */
+  /* FIXME: prevent flickering issue */
   background-color: #222;
 }
 
