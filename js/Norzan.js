@@ -7,13 +7,8 @@ export class Norzan {
     this.distDom = distDom
     this.intervalId = null
 
-    this.openingTime = moment()
-      .startOf('day')
-      .add(config.openingTime, 'hours')
-
-    this.closingTime = moment()
-      .startOf('day')
-      .add(config.closingTime, 'hours')
+    this.openingTime = moment(config.openingTime, moment.HTML5_FMT.TIME_SECONDS)
+    this.closingTime = moment(config.closingTime, moment.HTML5_FMT.TIME_SECONDS)
   }
 
   _updateTime() {

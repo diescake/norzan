@@ -24,10 +24,10 @@ $ yarn build
 {
   durationFormat: 'hh:mm:ss.SS', // See. Moment.js format
   updateIntervalMs: 90,
-  openingTime: 10.5, // It means AM 10:30
-  closingTime: 19.0, // It means PM 07:00
+  openingTime: '10:30:00',
+  closingTime: '19:00:00',
   messageInClosed: 'During non-business hours.',
-  backgroundColor: '#222',
+  backgroundColor: '#222222', // Actually, input from your browser's color picker.
   fontColor: '#e3e3e3',
 }
 ```
