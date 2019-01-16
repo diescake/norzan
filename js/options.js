@@ -10,13 +10,13 @@ const resetButton = document.getElementById('reset-button')
 
 const optionKeys = Object.keys(defaultOption)
 
-const elems = optionKeys.reduce((obj, key) => {
+const elemTable = optionKeys.reduce((table, key) => {
   const elem = document.getElementById(kebabCase(key))
   if (!elem) {
     console.warn(`${kebabCase(key)} is not declared in options.html.`)
-    return obj
+    return table
   }
-  return { ...obj, [key]: elem }
+  return { ...table, [key]: elem }
 }, {})
 
 const loadOptions = () => {
@@ -27,16 +27,16 @@ const loadOptions = () => {
       loadOptions()
       return
     }
-    optionKeys.forEach(key => (elems[key].value = option[key]))
+    optionKeys.forEach(key => (elemTable[key].value = option[key]))
   })
 }
 
 const saveOptions = () => {
-  if (!elems.durationFormat) {
+  if (!elemTable.durationFormat) {
     console.error('No value')
     return
   }
-  const option = optionKeys.reduce((obj, key) => ({ ...obj, [key]: elems[key].value }), {})
+  const option = optionKeys.reduce((table, key) => ({ ...table, [key]: elemTable[key].value }), {})
   chrome.storage.sync.set(option)
 }
 

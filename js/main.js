@@ -5,7 +5,7 @@ import '../style/reset.css'
 import '../style/common.css'
 import '../style/main.css'
 
-const elems = {
+const elemTable = {
   body: document.body,
   time: document.getElementById('time'),
 }
@@ -18,14 +18,14 @@ const loadOption = () =>
   })
 
 const setStyle = option => {
-  elems.body.style.backgroundColor = option.backgroundColor
-  elems.time.style.color = option.fontColor
+  elemTable.body.style.backgroundColor = option.backgroundColor
+  elemTable.time.style.color = option.fontColor
 }
 
 ;(async () => {
   const option = (await loadOption()) || defaultOption
   setStyle(option)
 
-  const norzan = new Norzan(option, elems.time)
+  const norzan = new Norzan(option, elemTable.time)
   norzan.startTimer()
 })()
