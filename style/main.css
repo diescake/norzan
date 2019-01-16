@@ -38,4 +38,9 @@ body {
   text-decoration: none;
   font-size: 5rem;
   margin: 15px;
+  transition: opacity 0.15s;
+}
+
+.a-option:hover {
+  opacity: 0.85;
 }
