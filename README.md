@@ -8,17 +8,29 @@ Norzan is a Chrome Extension to display the rest of workable time into it's new 
 
 ## Usage
 
-Currently, this extension is **NOT** published to Chrome Web Store. Please clone this repository and load as a unpacked extension. See the official tutorial for Chrome Extensions [Getting Started Tutorial](https://developer.chrome.com/extensions/getstarted)
+The easiest way to install is downloading from [Chrome Web Store](https://chrome.google.com/webstore/detail/norzan/njbkbgbnhlmgmneldkienakbbeadngih).  
+Another way, download zip package on [this Release page](https://github.com/diescake/norzan/releases) and load it manually on `chrome://extensions/`.
 
 ## Development
 
-Generate production codes and collect assets under the `dist/prod` directory. If you want to run in your Chrome browser, load the `prod` directory as top of unpacked Chrome Extension.
+Clone this repository and run below command. Generate production codes and collect assets under the `dist/prod` directory. If you want to run in your Chrome browser, load the `prod` directory as unpacked Chrome Extension. For more information, see the official tutorial; [Getting Started Tutorial](https://developer.chrome.com/extensions/getstarted)
 
-```js
+```sh
 $ yarn watch
 ```
 
+## Publication
+
+Create the zip package by bellow commands and upload it to the Chrome Web Store.
+
+```sh
+$ yarn build
+$ yarn package
+```
+
 ## Config
+
+Actually, you don't have to edit `norzan.config.js` directly.
 
 ```js
 {
