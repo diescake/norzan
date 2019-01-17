@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "parcel build --no-cache --out-dir dist/prod html/*.html",
+    "package": "cd dist; zip -r norzan.zip ./prod",
     "watch": "parcel watch --no-cache --out-dir dist/prod html/*.html"
   },
   "staticFiles": {
