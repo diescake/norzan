@@ -1,6 +1,6 @@
 {
   "name": "Norzan",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Norzan displays the rest of workable time into a new tab.",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "chrome_url_overrides": {
