@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Options</title>
-  </head>
-  <body>
-    <h1>Norzan options</h1>
-    <main class="main">
-      <form id="options-form" name="options">
-        <div class="option-row">
-          <label class="option-cell">Time format:</label><input id="duration-format" type="text" placeholder="hh:mm:ss.SS" />
-        </div>
-        <div class="option-row">
-          <label class="option-cell">Update interval:</label><input id="update-interval-ms" type="number" placeholder="90" />
-        </div>
-        <div class="option-row">
-          <label class="option-cell">Opening time:</label><input id="opening-time" type="time" step="1" placeholder="10:30:00" />
-        </div>
-        <div class="option-row">
-          <label class="option-cell">Closing time:</label><input id="closing-time" type="time" step="1" placeholder="19:00:00" />
-        </div>
-        <div class="option-row">
-          <label class="option-cell">Message in closed:</label><input id="message-in-closed" type="text" placeholder="During non-business hours." />
-        </div>
-        <div class="option-row">
-          <label class="option-cell">Background color:</label><input id="background-color" type="color" placeholder="#222222" />
-        </div>
-        <div class="option-row"><label class="option-cell">Font color:</label><input id="font-color" type="color" placeholder="#e3e3e3" /></div>
-        <button id="save-button" type="button">save</button><button id="reset-button" type="button">reset</button>
-      </form>
-    </main>
-    <footer class="footer"><a href="https://github.com/diescake/norzan">GitHub</a> | <a href="https://twitter.com/phocaenidae">Twitter</a></footer>
-  </body>
-  <script src="../js/options.js"></script>
+
+<head>
+  <title>Options</title>
+  <link rel="stylesheet" type="text/css" href="../style/reset.css" />
+</head>
+
+<body>
+  <h1>Norzan options</h1>
+  <main class="main">
+    <form id="options-form" name="options">
+      <div class="option-row">
+        <label class="option-cell">Time format:</label><input id="duration-format" type="text" placeholder="hh:mm:ss.SS" />
+      </div>
+      <div class="option-row">
+        <label class="option-cell">Update interval:</label><input id="update-interval-ms" type="number" placeholder="90" />
+      </div>
+      <div class="option-row">
+        <label class="option-cell">Opening time:</label><input id="opening-time" type="time" step="1" placeholder="10:30:00" />
+      </div>
+      <div class="option-row">
+        <label class="option-cell">Closing time:</label><input id="closing-time" type="time" step="1" placeholder="19:00:00" />
+      </div>
+      <div class="option-row">
+        <label class="option-cell">Message in closed:</label><input id="message-in-closed" type="text" placeholder="During non-business hours." />
+      </div>
+      <div class="option-row">
+        <label class="option-cell">Background color:</label><input id="background-color" type="color" placeholder="#222222" />
+      </div>
+      <div class="option-row"><label class="option-cell">Font color:</label><input id="font-color" type="color"
+          placeholder="#e3e3e3" /></div>
+      <button id="save-button" type="button">save</button><button id="reset-button" type="button">reset</button>
+    </form>
+  </main>
+  <footer class="footer"><a href="https://github.com/diescake/norzan">GitHub</a> | <a href="https://twitter.com/phocaenidae">Twitter</a></footer>
+</body>
+<script src="../js/options.js"></script>
+
 </html>

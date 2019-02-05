@@ -1,7 +1,6 @@
 import { kebabCase } from 'change-case'
 import { defaultOption } from '../config/norzan.config.js'
 
-import '../style/reset.css'
 import '../style/common.css'
 import '../style/option.css'
 
