@@ -39,10 +39,17 @@ Actually, you don't have to edit `norzan.config.js` directly.
   openingTime: '10:30:00',
   closingTime: '19:00:00',
   messageInClosed: 'During non-business hours.',
-  backgroundColor: '#222222', // Actually, input from the color picker in your browser.
+  backgroundColor: '#222222', // Actually, enter this from the color picker in your browser.
+  googleFont: '', // Details below.
   fontColor: '#e3e3e3',
 }
 ```
+
+### Google fonts
+
+Norzan supports Web Fonts provided on [Google Fonts](https://fonts.google.com/). If you want to use this function, pick up your favorite font on the site and enter it's font-family name such as `Nova Mono`, `Staatliches` or `Indie Flower`.
+
+Then, monospace fonts are recommended because proportional fonts shake the numbers at every updating time.
 
 ## Logo
 
