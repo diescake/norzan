@@ -22,7 +22,7 @@ button {
   display: table;
   padding: 10px 30px 30px;
   line-height: 1.7;
-  width: 800px;
+  width: 900px;
   font-size: 2rem;
 }
 
@@ -32,7 +32,7 @@ button {
 
 .option-cell {
   display: table-cell;
-  width: 200px;
+  width: 250px;
   list-style-type: disc;
 }
 

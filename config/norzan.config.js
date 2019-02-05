@@ -5,5 +5,6 @@ export const defaultOption = {
   closingTime: '17:30:00',
   messageInClosed: 'During non-business hours.',
   backgroundColor: '#222222',
+  googleFont: '',
   fontColor: '#e3e3e3',
 }

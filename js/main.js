@@ -1,5 +1,6 @@
 import { Norzan } from '../js/Norzan.js'
 import { defaultOption } from '../config/norzan.config.js'
+import WebFont from 'webfontloader'
 
 import '../style/common.css'
 import '../style/main.css'
@@ -19,6 +20,21 @@ const loadOption = () =>
 const setStyle = option => {
   elemTable.body.style.backgroundColor = option.backgroundColor
   elemTable.time.style.color = option.fontColor
+
+  if (!option.googleFont) {
+    return
+  }
+
+  WebFont.load({
+    google: {
+      families: [option.googleFont]
+    },
+    timeout: 2000,
+    fontactive: fontFamily => {
+      console.log(`${fontFamily} load completed.`)
+      elemTable.time.style.fontFamily = option.googleFont
+    }
+  })
 }
 
 ;(async () => {
