@@ -17,7 +17,7 @@ body {
 }
 
 .time {
-  font-family: 'Trebuchet MS', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-family: 'Trebuchet MS', 'Hiragino Kaku Gothic ProN', monospace;
   font-size: 7vw;
 }
 
