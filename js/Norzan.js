@@ -19,7 +19,7 @@ export class Norzan {
       return
     }
 
-    this.endTimer()
+    this.stopTimer()
     this.outDom.innerText = this.option.messageInClosed
   }
 
@@ -34,12 +34,12 @@ export class Norzan {
 
   startTimer() {
     if (this.intervalId) {
-      this.endTimer()
+      this.stopTimer()
     }
     this.intervalId = setInterval(this._updateTime.bind(this), this.option.updateIntervalMs)
   }
 
-  endTimer() {
+  stopTimer() {
     if (!this.intervalId) {
       return
     }
