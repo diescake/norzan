@@ -3875,10 +3875,10 @@ param-case@^2.1.0:
   dependencies:
     no-case "^2.2.0"
 
-parcel-bundler@^1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/parcel-bundler/-/parcel-bundler-1.12.0.tgz#b6ef8165004c05c4d411a75e3be54c619675f5ac"
-  integrity sha512-nPmOp5eTeYXEp/tEqZmDBtCjIzm1MjeufWprsLnYUQKCdBMG5LMfKuhq0n8Cvzeti9bMHJXXi4WRkA5ER6nIlA==
+parcel-bundler@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/parcel-bundler/-/parcel-bundler-1.12.1.tgz#a9eab83057e4fc52fb6b49ef569d9d7824cdf636"
+  integrity sha512-LyB1x6kVPyuJtZ3p5FIDwO+k460DNG1uaBQFkXwErF+eCPmJ8Ige5/yob7W/TWg1/TdmQV6GJIsmYSRNZw33YQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
