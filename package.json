@@ -17,7 +17,7 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.7.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.2.1"
   },
