@@ -22,7 +22,7 @@
     "parcel-plugin-static-files-copy": "^2.3.1"
   },
   "dependencies": {
-    "change-case": "^4.1.1",
+    "change-case": "^4.1.2",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "webfontloader": "^1.6.28"
